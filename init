@@ -22,5 +22,5 @@ if [ -d "$new_repo" ]; then
 fi
 
 mkdir "$base_dir/$new_repo"
-git init --bare "$base_dir/$new_repo" 2>&1>/dev/null \
+git init --bare "$base_dir/$new_repo" >/dev/null 2>&1\
     && echo "Initialized empty Git repository: git@$(uname -n):$new_repo"

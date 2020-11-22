@@ -23,4 +23,6 @@ if [ -d "$target" ]; then
 	rm -rf "${base_dir:?}/${target:?}" \
 	    && echo "${target} deleted"
     fi
+else
+    echo "$target does not exist."
 fi
