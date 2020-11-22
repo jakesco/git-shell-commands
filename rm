@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]; then
+    echo "usage: rm <name>"
+    exit 1
+fi
+
+base_dir="$HOME"
+target="$1"
+
+case $target in
+    *\.git)
+	;;
+    *)
+	target="${target}.git"
+	;;
+esac
+
+if [ -d "$target" ]; then
+    printf "Really delete? [y/N] "
+    read -r confirm
+    if [ "${confirm,,}" = "y" ]; then
+	rm -rf "${base_dir:?}/${target:?}" \
+	    && echo "${target} deleted"
+    fi
+fi
