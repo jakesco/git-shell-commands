@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "Available Commands:"
+echo "init <name>: Initialize new Git repository with <name>"
+echo "ls: list all repositories"
+echo "rm <name>: Delete Git repository with <name>"

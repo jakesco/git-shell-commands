@@ -21,7 +21,7 @@ if [ -d "$target" ]; then
     read -r confirm
     if [ "${confirm,,}" = "y" ]; then
 	rm -rf "${base_dir:?}/${target:?}" \
-	    && echo "Deleted Git repository: ${target}"
+	    && echo "Deleted Git repository ${target}"
     fi
 else
     echo "$target does not exist."
