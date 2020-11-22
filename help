@@ -1,7 +1,6 @@
 #!/bin/sh
 
-echo """
-Welcome to git-shell on $(uname -n)
+echo """Welcome to git-shell on $(uname -n)!
 
 Available Commands:
 ls: list all repositories.
