@@ -17,11 +17,11 @@ case $target in
 esac
 
 if [ -d "$target" ]; then
-    printf "Really delete? [y/N] "
+    printf "Confirm delete? [y/N] "
     read -r confirm
     if [ "${confirm,,}" = "y" ]; then
 	rm -rf "${base_dir:?}/${target:?}" \
-	    && echo "${target} deleted"
+	    && echo "Deleted Git repository: ${target}"
     fi
 else
     echo "$target does not exist."
