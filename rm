@@ -19,8 +19,8 @@ esac
 if [ -d "$target" ]; then
     printf "Confirm delete? [y/N] "
     read -r confirm
-    if [ "${confirm,,}" = "y" ]; then
-	rm -rf "${base_dir:?}/${target:?}" \
+    if [ $(echo ${confirm} | tr '[:upper:]' '[:lower:]') = "y" ]; then
+	    rm -rf "${base_dir:?}/${target:?}" \
 	    && echo "Deleted Git repository ${target}"
     fi
 else
