@@ -1,7 +1,6 @@
 #!/bin/sh
 
-echo """Welcome to git-shell on $(uname -n)!
-
+echo """
 Available Commands:
 ls: list all repositories.
 init <name>: Initialize new Git repository with <name>

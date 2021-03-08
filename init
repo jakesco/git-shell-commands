@@ -24,3 +24,4 @@ fi
 mkdir "$base_dir/$new_repo"
 git init --bare "$base_dir/$new_repo" >/dev/null 2>&1\
     && echo "Initialized empty Git repository: $new_repo"
+    && echo "Clone with: repos/$new_repo"
