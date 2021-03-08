@@ -16,7 +16,7 @@ case $target in
 	;;
 esac
 
-if [ -d "$target" ]; then
+if [ -d "${base_dir}/${target}" ]; then
     printf "Confirm delete? [y/N] "
     read -r confirm
     if [ $(echo ${confirm} | tr '[:upper:]' '[:lower:]') = "y" ]; then
