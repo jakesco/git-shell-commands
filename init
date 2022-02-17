@@ -5,7 +5,7 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-base_dir="$HOME/r"
+base_dir="$HOME"
 new_repo="$1"
 
 case $new_repo in
@@ -24,4 +24,4 @@ fi
 mkdir "$base_dir/$new_repo"
 git init --bare "$base_dir/$new_repo" >/dev/null 2>&1 \
     && echo "Initialized empty Git repository: $new_repo" \
-    && echo "Clone with: r/$new_repo"
+    && echo "Clone with: $new_repo"
